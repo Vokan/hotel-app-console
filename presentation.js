@@ -23,7 +23,7 @@ function start(){
             start();
             break;
 
-            case "99" : Go(Aurevoir);
+            case "99" : Go("Aurevoir");
             rl.close();
             break;
 
