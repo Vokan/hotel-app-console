@@ -25,14 +25,15 @@ function start(){
             case "1" : Go(">> Liste des clients");
             service.getClient((client)=>{
                 Go(client);
-            
-            start();
+                start();
             });
             break;
 
             case "99" : Go("Au revoir");
             rl.close();
             break;
+            default:Go("byby");
+            rl.close();
         }
     });
 }
