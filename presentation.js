@@ -7,23 +7,23 @@ function menu(){
 }
 exports.afficherStrart = start;
 
-var readline = ('readline');
+var readline = require('readline');
 var rl = readline.createInterface({
-    intput : process.sdtin,
-    output : process.sdtout
+    input: process.stdin,
+    output: process.stdout
 });
 
 function start(){
     menu();
     
-    rl.question('faite un choix ',function(saisie){
+    rl.question("faite un choix ",function(saisie){
 
         switch (saisie) {
             case "1" : Go(">> Liste des clients");
             start();
             break;
 
-            case "99" : Go("Aurevoir");
+            case "99" : Go("Au revoir");
             rl.close();
             break;
 
