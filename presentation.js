@@ -16,7 +16,7 @@ var rl = readline.createInterface({
 function start(){
     menu();
     
-    rl.question("faite un choix ",function(saisie){
+    rl.question("Un choix s'offre à toi ! ",function(saisie){
 
         switch (saisie) {
             case "1" : Go(">> Liste des clients");
@@ -26,7 +26,6 @@ function start(){
             case "99" : Go("Au revoir");
             rl.close();
             break;
-
-    }
-});
+        }
+    });
 }
