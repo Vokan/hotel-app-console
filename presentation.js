@@ -8,7 +8,7 @@ function menu(){
 exports.afficherStrart = start;
 
 var readline = ('readline');
-var rl = readline.creatInterface({
+var rl = readline.createInterface({
     intput : process.sdtin,
     output : process.sdtout
 });
@@ -16,7 +16,7 @@ var rl = readline.creatInterface({
 function start(){
     menu();
     
-    rl.question('',function(saisie){
+    rl.question('faite un choix ',function(saisie){
 
         switch (saisie) {
             case "1" : Go(">> Liste des clients");
