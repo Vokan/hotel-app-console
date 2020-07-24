@@ -7,7 +7,10 @@ function menu(){
 }
 exports.afficherStrart = start;
 
+
 var readline = require('readline');
+var service = require('./service');
+
 var rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
@@ -20,7 +23,11 @@ function start(){
 
         switch (saisie) {
             case "1" : Go(">> Liste des clients");
+            service.getClient((client)=>{
+                Go(client);
+            
             start();
+            });
             break;
 
             case "99" : Go("Au revoir");
